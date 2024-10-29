@@ -14,6 +14,10 @@ var inch = InchConverter.MToIn(1);
 Log.Info($"in:{inch}");
 
 Log.Info($"LocalPosition(M):{LocalPosition.ToM()}");
+
 LocalPosition = new Vector3( 1, 1, 1 ).ToIn();
 Log.Info($"new Position:{LocalPosition}");
+
+var distance = Vector3.Direction(pointA, pointB);
+Log.Info($"distance(M):{distance.ToM()}");
 ```
