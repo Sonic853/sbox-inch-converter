@@ -12,4 +12,8 @@ var m = InchConverter.InToM(1);
 Log.Info($"m:{m}");
 var inch = InchConverter.MToIn(1);
 Log.Info($"in:{inch}");
+
+Log.Info($"LocalPosition(M):{LocalPosition.ToM()}");
+LocalPosition = new Vector3( 1, 1, 1 ).ToIn();
+Log.Info($"new Position:{LocalPosition}");
 ```
