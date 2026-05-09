@@ -1,6 +1,6 @@
 using Editor;
 
-namespace Sonic853.InchConverterLib.Editor
+namespace Sonic853.InchConverterLib.Editors
 {
 	public static class InchConverterMenu
 	{

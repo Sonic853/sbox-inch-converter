@@ -1,17 +1,17 @@
 using System.Text.RegularExpressions;
 using Editor;
 
-namespace Sonic853.InchConverterLib.Editor
+namespace Sonic853.InchConverterLib.Editors
 {
-    [Dock( "Editor", "Inch Converter" )]
+    [Dock("Editor", "Inch Converter")]
     public class InchConverterWidget : Widget
     {
         protected static InchConverterWidget instance;
-        public static InchConverterWidget Instance => instance ?? new( null );
+        public static InchConverterWidget Instance => instance ?? new(null);
         LineEdit inputm;
         LineEdit inputcm;
         LineEdit inputin;
-        public InchConverterWidget( Widget parent ) : base( parent, false )
+        public InchConverterWidget(Widget parent) : base(parent, false)
         {
             // Create a Column Layout
             Layout = Layout.Column();
@@ -19,34 +19,34 @@ namespace Sonic853.InchConverterLib.Editor
             Layout.Margin = 4;
             Layout.Spacing = 4;
             // Apply some CSS styling
-            SetStyles( "background-color: #303445; color: white; font-weight: 600;" );
+            SetStyles("background-color: #303445; color: white; font-weight: 600;");
 
             // Add some child Widgets to the Layout
-            Layout.Add( new Label( "m:", this ) );
-            inputm = Layout.Add( new LineEdit()
+            Layout.Add(new Label("m:", this));
+            inputm = Layout.Add(new LineEdit()
             {
                 Text = "0.0254",
-            } );
-            Layout.Add( new Label( "cm:", this ) );
-            inputcm = Layout.Add( new LineEdit()
+            });
+            Layout.Add(new Label("cm:", this));
+            inputcm = Layout.Add(new LineEdit()
             {
                 Text = "2.54",
-            } );
-            Layout.Add( new Label( "inch:", this ) );
-            inputin = Layout.Add( new LineEdit()
+            });
+            Layout.Add(new Label("inch:", this));
+            inputin = Layout.Add(new LineEdit()
             {
                 Text = "1",
-            } );
+            });
             inputm.TextChanged += InputMTextChanged;
             inputcm.TextChanged += InputCMTextChanged;
             inputin.TextChanged += InputINTextChanged;
         }
-        void InputMTextChanged( string text )
+        void InputMTextChanged(string text)
         {
-            var _text = NumberOnly( text );
+            var _text = NumberOnly(text);
 
-            if ( !float.TryParse( _text, out var m ) ) { return; }
-            if ( m == 0f )
+            if (!float.TryParse(_text, out var m)) { return; }
+            if (m == 0f)
             {
                 ToZero();
                 return;
@@ -63,12 +63,12 @@ namespace Sonic853.InchConverterLib.Editor
             inputm.Text = _text;
             inputm.TextChanged += InputMTextChanged;
         }
-        void InputCMTextChanged( string text )
+        void InputCMTextChanged(string text)
         {
-            var _text = NumberOnly( text );
+            var _text = NumberOnly(text);
 
-            if ( !float.TryParse( _text, out var cm ) ) { return; }
-            if ( cm == 0f )
+            if (!float.TryParse(_text, out var cm)) { return; }
+            if (cm == 0f)
             {
                 ToZero();
                 return;
@@ -85,12 +85,12 @@ namespace Sonic853.InchConverterLib.Editor
             inputcm.Text = _text;
             inputcm.TextChanged += InputCMTextChanged;
         }
-        void InputINTextChanged( string text )
+        void InputINTextChanged(string text)
         {
-            var _text = NumberOnly( text );
+            var _text = NumberOnly(text);
 
-            if ( !float.TryParse( _text, out var inch ) ) { return; }
-            if ( inch == 0f )
+            if (!float.TryParse(_text, out var inch)) { return; }
+            if (inch == 0f)
             {
                 ToZero();
                 return;
@@ -121,11 +121,11 @@ namespace Sonic853.InchConverterLib.Editor
             inputm.Text = "0";
             inputm.TextChanged += InputMTextChanged;
         }
-        string NumberOnly( string text )
+        string NumberOnly(string text)
         {
-            var _text = Regex.Replace( text, @"[^0-9.]", "" );
+            var _text = Regex.Replace(text, @"[^0-9.]", "");
 
-            if ( string.IsNullOrEmpty( _text ) )
+            if (string.IsNullOrEmpty(_text))
             {
                 _text = "0";
             }
