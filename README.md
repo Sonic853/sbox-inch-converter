@@ -21,3 +21,28 @@ Log.Info($"new Position:{LocalPosition}");
 var distance = Vector3.Direction(pointA, pointB);
 Log.Info($"distance(M):{distance.ToM()}");
 ```
+
+## Extension
+
+```CSharp
+using Sonic853.InchConverterLib.Extensions;
+
+var meter = inchFloat.Meter;
+Log.Info($"m:{meter}");
+inchFloat.Meter = 1; // 1 meter
+Log.Info($"in:{inchFloat}");
+
+var meterVec2 = inchVec2.Meter;
+Log.Info($"m:{meterVec2}");
+inchVec2.Meter = new Vector2(1, 1); // 1 meter
+Log.Info($"in:{inchVec2}");
+
+var meterVec3 = inchVec3.Meter;
+Log.Info($"m:{meterVec3}");
+inchVec3.Meter = new Vector3(1, 1, 1); // 1 meter
+Log.Info($"in:{inchVec3}");
+
+Log.Info($"m:{gameObject.LocalPositionMeter}");
+gameObject.WorldPositionMeter = new Vector3(1, 1, 1); // 1 meter
+Log.Info($"in:{gameObject.LocalPosition}");
+```
