@@ -1,4 +1,6 @@
-# s&box Inch Converter
+# s&box Inch 2 Meter Converter
+
+# PLEASE GIVE thumbs-up EMOJI to this Issue to make Official support for metric units: [Facepunch/sbox-public/issues/8773](https://github.com/Facepunch/sbox-public/issues/8773)
 
 ![Snipaste_2024-10-29_22-59-42](https://github.com/user-attachments/assets/36c73d74-9e48-4e43-825c-a3d429dd8d10)
 
