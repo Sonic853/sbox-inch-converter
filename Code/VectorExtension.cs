@@ -1,5 +1,3 @@
-using Sandbox;
-
 namespace Sonic853.InchConverterLib.Extensions
 {
     public static class VectorExtension

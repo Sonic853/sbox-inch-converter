@@ -123,6 +123,11 @@ namespace Sonic853.InchConverterLib
         /// <returns>Meter</returns>
         public static Vector3 ToM(this Vector3 inch) => inch * intom;
         /// <summary>
+        /// Inch to Meter
+        /// </summary>
+        /// <returns>Meter</returns>
+        public static Vector3 ToMeter(this Vector3 inch) => ToM(inch);
+        /// <summary>
         /// Meter to Inch
         /// </summary>
         /// <returns>Inch</returns>
@@ -133,6 +138,11 @@ namespace Sonic853.InchConverterLib
         /// <returns>Meter</returns>
         public static Vector2 ToM(this Vector2 inch) => inch * intom;
         /// <summary>
+        /// Inch to Meter
+        /// </summary>
+        /// <returns>Meter</returns>
+        public static Vector2 ToMeter(this Vector2 inch) => ToM(inch);
+        /// <summary>
         /// Meter to Inch
         /// </summary>
         /// <returns>Inch</returns>
@@ -142,6 +152,11 @@ namespace Sonic853.InchConverterLib
         /// </summary>
         /// <returns>Meter</returns>
         public static float ToM(this float inch) => inch * intom;
+        /// <summary>
+        /// Inch to Meter
+        /// </summary>
+        /// <returns>Meter</returns>
+        public static float ToMeter(this float inch) => ToM(inch);
         /// <summary>
         /// Meter to Inch
         /// </summary>

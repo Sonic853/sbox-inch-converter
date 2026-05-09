@@ -1,4 +1,3 @@
-
 namespace Sonic853.InchConverterLib.Extensions
 {
     public static class FloatExtension
