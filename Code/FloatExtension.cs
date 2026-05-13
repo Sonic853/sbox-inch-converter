@@ -1,18 +1,17 @@
-namespace Sonic853.InchConverterLib.Extensions
+namespace Sonic853.InchConverterLib.Extensions;
+
+public static class FloatExtension
 {
-    public static class FloatExtension
+    extension(ref float floatValue)
     {
-        extension(ref float floatValue)
+        /// <summary>
+        /// Get: Inch to Meter<br />
+        /// Set: Meter to Inch
+        /// </summary>
+        public float Meter
         {
-            /// <summary>
-            /// Get: Inch to Meter<br />
-            /// Set: Meter to Inch
-            /// </summary>
-            public float Meter
-            {
-                get => floatValue.ToM();
-                set => floatValue = value.ToIn();
-            }
+            get => floatValue.ToM();
+            set => floatValue = value.ToIn();
         }
     }
 }
